@@ -9,13 +9,13 @@ var Counter = Kilroy({
       return (item > 255) ? 0 : item += amount;
     });
     var color = 'color: rgb('+this.color.join(', ')+')';
-    return ['div',
+    return ['div .wrapper',
     ['b', { style: color }, 'Count: ' + this.count],
-    ['button .incr', { type: 'button' }, '[+]']];
+    ['button #incr', { type: 'button' }, 'Add']];
   },
   events: {
     click: {
-      ".incr": function () {
+      "#incr": function () {
         this.count++;
         this.d();
       }
@@ -23,6 +23,6 @@ var Counter = Kilroy({
   }
 });
 
-var counter = Counter(10);
+var counter = Counter(0);
 
-document.body.appendChild(counter.node);
+document.getElementById('application').appendChild(counter.node);

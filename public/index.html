@@ -2,13 +2,26 @@
 <html>
 <head>
   <title>Kilroy Testing</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
   <style type="text/css" media="screen">
+    .wrapper {
+      margin: 2em;
+    }
     button {
       margin-left: 1em;
+      outline: 0;
+      color: white;
+      border: none;
+      padding: 0.4em 1em;
+      background: #373B40;
+    }
+    button:hover {
+      background: #D16568;
     }
   </style>
 </head>
 <body>
+<div id="application"></div>
 <script src="kilroy.js"></script>
 <script src="main.js"></script>
 </body>
