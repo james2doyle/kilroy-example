@@ -1,12 +1,13 @@
 {
   "name": "kilroy-example",
   "scripts": {
-    "postinstall": "cp node_modules/kilroy/dist/kilroy.js public/kilroy.js",
-    "build": "cat node_modules/kilroy/dist/kilroy.js public/main.js | uglifyjs -cm > public/scripts.min.js",
+    "postinstall": "cp node_modules/kilroy/dist/kilroy.js public/kilroy.js && cp node_modules/whatwg-fetch/fetch.js public/fetch.js",
+    "build": "cat node_modules/kilroy/dist/kilroy.js node_modules/whatwg-fetch/fetch.js public/main.js | uglifyjs -cm > public/scripts.min.js",
     "start": "ecstatic -p 8000 public"
   },
   "dependencies": {
-    "kilroy": "^0.1.1"
+    "kilroy": "^0.1.1",
+    "whatwg-fetch": "^0.9.0"
   },
   "devDependencies": {
     "ecstatic": "~0.8.0",

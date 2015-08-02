@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kilroy Testing</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+  <style type="text/css" media="screen">
+    .wrapper {
+      margin: 2em;
+      display: inline-block;
+    }
+    ul {
+      margin: 0;
+      padding: 1em 0 0 0;
+      position: relative;
+    }
+    ul li {
+      list-style: none;
+      float: left;
+      transition: all 0.2s ease;
+    }
+    li.active {
+      opacity: 1;
+    }
+    li.inactive {
+      opacity: 0;
+    }
+  </style>
+</head>
+<body>
+<div id="application"></div>
+<script src="fetch.js"></script>
+<script src="kilroy.js"></script>
+<script src="filter.js"></script>
+</body>
+</html>
